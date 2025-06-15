@@ -1,0 +1,42 @@
+﻿@model pactica123.Models.Numero_Inventario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Numero_Inventario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.numero_inventario1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numero_inventario1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_registro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_registro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tabla_Articulos.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tabla_Articulos.descripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_numero_inventario }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

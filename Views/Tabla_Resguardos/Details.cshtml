@@ -1,0 +1,50 @@
+﻿@model pactica123.Models.Tabla_Resguardos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tabla_Resguardos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_entrega)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_entrega)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_Autoriza)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_Autoriza)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_Realiza)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_Realiza)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Personas.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Personas.nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_resguardo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

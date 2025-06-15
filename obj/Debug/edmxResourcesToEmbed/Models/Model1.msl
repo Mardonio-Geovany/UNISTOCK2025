@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="InventarioModelStoreContainer" CdmEntityContainer="InventarioEntities">
+    <EntitySetMapping Name="Adscripcion">
+      <EntityTypeMapping TypeName="InventarioModel.Adscripcion">
+        <MappingFragment StoreEntitySet="Adscripcion">
+          <ScalarProperty Name="id_adscripcion" ColumnName="id_adscripcion" />
+          <ScalarProperty Name="nombre_adscripcion" ColumnName="nombre_adscripcion" />
+          <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Detalle_Vale_Prestamo">
+      <EntityTypeMapping TypeName="InventarioModel.Detalle_Vale_Prestamo">
+        <MappingFragment StoreEntitySet="Detalle_Vale_Prestamo">
+          <ScalarProperty Name="id_detalle_vale_prestamo" ColumnName="id_detalle_vale_prestamo" />
+          <ScalarProperty Name="id_prestamo" ColumnName="id_prestamo" />
+          <ScalarProperty Name="id_inventario" ColumnName="id_inventario" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Detalle_Vales_Resguardos">
+      <EntityTypeMapping TypeName="InventarioModel.Detalle_Vales_Resguardos">
+        <MappingFragment StoreEntitySet="Detalle_Vales_Resguardos">
+          <ScalarProperty Name="id_detalle_vale_resguardo" ColumnName="id_detalle_vale_resguardo" />
+          <ScalarProperty Name="id_resguardo" ColumnName="id_resguardo" />
+          <ScalarProperty Name="id_inventario" ColumnName="id_inventario" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fuentes_Financiamiento">
+      <EntityTypeMapping TypeName="InventarioModel.Fuentes_Financiamiento">
+        <MappingFragment StoreEntitySet="Fuentes_Financiamiento">
+          <ScalarProperty Name="id_fuente_financiamiento" ColumnName="id_fuente_financiamiento" />
+          <ScalarProperty Name="nombre_fuente" ColumnName="nombre_fuente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Numero_Inventario">
+      <EntityTypeMapping TypeName="InventarioModel.Numero_Inventario">
+        <MappingFragment StoreEntitySet="Numero_Inventario">
+          <ScalarProperty Name="id_numero_inventario" ColumnName="id_numero_inventario" />
+          <ScalarProperty Name="numero_inventario1" ColumnName="numero_inventario" />
+          <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
+          <ScalarProperty Name="id_articulo" ColumnName="id_articulo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personas">
+      <EntityTypeMapping TypeName="InventarioModel.Personas">
+        <MappingFragment StoreEntitySet="Personas">
+          <ScalarProperty Name="id_persona" ColumnName="id_persona" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="id_tipo_puesto" ColumnName="id_tipo_puesto" />
+          <ScalarProperty Name="id_adscripcion" ColumnName="id_adscripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tabla_Articulos">
+      <EntityTypeMapping TypeName="InventarioModel.Tabla_Articulos">
+        <MappingFragment StoreEntitySet="Tabla_Articulos">
+          <ScalarProperty Name="id_articulo" ColumnName="id_articulo" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="numero_serie" ColumnName="numero_serie" />
+          <ScalarProperty Name="costo_adquisicion" ColumnName="costo_adquisicion" />
+          <ScalarProperty Name="fecha_adquisicion" ColumnName="fecha_adquisicion" />
+          <ScalarProperty Name="id_fuente_financiamiento" ColumnName="id_fuente_financiamiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tabla_Resguardos">
+      <EntityTypeMapping TypeName="InventarioModel.Tabla_Resguardos">
+        <MappingFragment StoreEntitySet="Tabla_Resguardos">
+          <ScalarProperty Name="id_resguardo" ColumnName="id_resguardo" />
+          <ScalarProperty Name="id_persona" ColumnName="id_persona" />
+          <ScalarProperty Name="fecha_entrega" ColumnName="fecha_entrega" />
+          <ScalarProperty Name="id_Autoriza" ColumnName="id_Autoriza" />
+          <ScalarProperty Name="id_Realiza" ColumnName="id_Realiza" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tabla_Tipos_Puesto">
+      <EntityTypeMapping TypeName="InventarioModel.Tabla_Tipos_Puesto">
+        <MappingFragment StoreEntitySet="Tabla_Tipos_Puesto">
+          <ScalarProperty Name="id_tipo_puesto" ColumnName="id_tipo_puesto" />
+          <ScalarProperty Name="descripcion_puesto" ColumnName="descripcion_puesto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vale_De_Prestamo">
+      <EntityTypeMapping TypeName="InventarioModel.Vale_De_Prestamo">
+        <MappingFragment StoreEntitySet="Vale_De_Prestamo">
+          <ScalarProperty Name="id_prestamo" ColumnName="id_prestamo" />
+          <ScalarProperty Name="Fecha_Emision" ColumnName="Fecha_Emision" />
+          <ScalarProperty Name="Lugar" ColumnName="Lugar" />
+          <ScalarProperty Name="Fecha_Devolucion" ColumnName="Fecha_Devolucion" />
+          <ScalarProperty Name="Descripcion_Articulo" ColumnName="Descripcion_Articulo" />
+          <ScalarProperty Name="Objetivo" ColumnName="Objetivo" />
+          <ScalarProperty Name="NombreEntrega" ColumnName="NombreEntrega" />
+          <ScalarProperty Name="NombreSolicitante" ColumnName="NombreSolicitante" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

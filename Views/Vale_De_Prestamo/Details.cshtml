@@ -1,0 +1,74 @@
+﻿@model pactica123.Models.Vale_De_Prestamo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vale_De_Prestamo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Emision)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Emision)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lugar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lugar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Devolucion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Devolucion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion_Articulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion_Articulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Objetivo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Objetivo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreEntrega)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreEntrega)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreSolicitante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreSolicitante)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_prestamo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

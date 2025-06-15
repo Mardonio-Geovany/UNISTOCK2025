@@ -1,0 +1,42 @@
+﻿@model pactica123.Models.Detalle_Vale_Prestamo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Detalle_Vale_Prestamo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id_inventario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_inventario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vale_De_Prestamo.Lugar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vale_De_Prestamo.Lugar)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_detalle_vale_prestamo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2a120125e3024fd4b1246c9908db1fc8" Name="Diagram1" ZoomLevel="110">
+        <EntityTypeShape EntityType="InventarioModel.Adscripcion" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioModel.Detalle_Vale_Prestamo" Width="1.5" PointX="5" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioModel.Detalle_Vales_Resguardos" Width="1.5" PointX="7.5" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioModel.Fuentes_Financiamiento" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioModel.Numero_Inventario" Width="1.5" PointX="5.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioModel.Personas" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioModel.Tabla_Articulos" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioModel.Tabla_Resguardos" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioModel.Tabla_Tipos_Puesto" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventarioModel.Vale_De_Prestamo" Width="1.5" PointX="2.75" PointY="5" IsExpanded="true" />
+        <AssociationConnector Association="InventarioModel.FK__Personas__id_ads__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioModel.FK__Detalle_V__id_pr__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioModel.FK__Detalle_V__id_in__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioModel.FK__Detalle_V__id_re__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioModel.FK__Tabla_Art__id_fu__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioModel.FK__Numero_In__id_ar__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioModel.FK__Personas__id_tip__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="InventarioModel.FK__Tabla_Res__id_pe__440B1D61" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

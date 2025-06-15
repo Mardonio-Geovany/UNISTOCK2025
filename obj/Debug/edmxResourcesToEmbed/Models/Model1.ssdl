@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InventarioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Adscripcion">
+    <Key>
+      <PropertyRef Name="id_adscripcion" />
+    </Key>
+    <Property Name="id_adscripcion" Type="int" Nullable="false" />
+    <Property Name="nombre_adscripcion" Type="varchar" MaxLength="100" />
+    <Property Name="ubicacion" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Detalle_Vale_Prestamo">
+    <Key>
+      <PropertyRef Name="id_detalle_vale_prestamo" />
+    </Key>
+    <Property Name="id_detalle_vale_prestamo" Type="int" Nullable="false" />
+    <Property Name="id_prestamo" Type="int" />
+    <Property Name="id_inventario" Type="int" />
+    <Property Name="cantidad" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Detalle_Vales_Resguardos">
+    <Key>
+      <PropertyRef Name="id_detalle_vale_resguardo" />
+    </Key>
+    <Property Name="id_detalle_vale_resguardo" Type="int" Nullable="false" />
+    <Property Name="id_resguardo" Type="int" />
+    <Property Name="id_inventario" Type="int" />
+    <Property Name="cantidad" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Fuentes_Financiamiento">
+    <Key>
+      <PropertyRef Name="id_fuente_financiamiento" />
+    </Key>
+    <Property Name="id_fuente_financiamiento" Type="int" Nullable="false" />
+    <Property Name="nombre_fuente" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Numero_Inventario">
+    <Key>
+      <PropertyRef Name="id_numero_inventario" />
+    </Key>
+    <Property Name="id_numero_inventario" Type="int" Nullable="false" />
+    <Property Name="numero_inventario" Type="varchar" MaxLength="50" />
+    <Property Name="fecha_registro" Type="date" />
+    <Property Name="id_articulo" Type="int" />
+  </EntityType>
+  <EntityType Name="Personas">
+    <Key>
+      <PropertyRef Name="id_persona" />
+    </Key>
+    <Property Name="id_persona" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" />
+    <Property Name="apellido" Type="varchar" MaxLength="100" />
+    <Property Name="correo" Type="varchar" MaxLength="100" />
+    <Property Name="telefono" Type="varchar" MaxLength="100" />
+    <Property Name="id_tipo_puesto" Type="int" />
+    <Property Name="id_adscripcion" Type="int" />
+  </EntityType>
+  <EntityType Name="Tabla_Articulos">
+    <Key>
+      <PropertyRef Name="id_articulo" />
+    </Key>
+    <Property Name="id_articulo" Type="int" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="150" />
+    <Property Name="cantidad" Type="int" />
+    <Property Name="marca" Type="varchar" MaxLength="50" />
+    <Property Name="modelo" Type="varchar" MaxLength="50" />
+    <Property Name="numero_serie" Type="varchar" MaxLength="50" />
+    <Property Name="costo_adquisicion" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="fecha_adquisicion" Type="date" />
+    <Property Name="id_fuente_financiamiento" Type="int" />
+  </EntityType>
+  <EntityType Name="Tabla_Resguardos">
+    <Key>
+      <PropertyRef Name="id_resguardo" />
+    </Key>
+    <Property Name="id_resguardo" Type="int" Nullable="false" />
+    <Property Name="id_persona" Type="int" />
+    <Property Name="fecha_entrega" Type="date" />
+    <Property Name="id_Autoriza" Type="int" />
+    <Property Name="id_Realiza" Type="int" />
+  </EntityType>
+  <EntityType Name="Tabla_Tipos_Puesto">
+    <Key>
+      <PropertyRef Name="id_tipo_puesto" />
+    </Key>
+    <Property Name="id_tipo_puesto" Type="int" Nullable="false" />
+    <Property Name="descripcion_puesto" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Vale_De_Prestamo">
+    <Key>
+      <PropertyRef Name="id_prestamo" />
+    </Key>
+    <Property Name="id_prestamo" Type="int" Nullable="false" />
+    <Property Name="Fecha_Emision" Type="date" />
+    <Property Name="Lugar" Type="varchar" MaxLength="100" />
+    <Property Name="Fecha_Devolucion" Type="date" />
+    <Property Name="Descripcion_Articulo" Type="varchar" MaxLength="100" />
+    <Property Name="Objetivo" Type="text" />
+    <Property Name="NombreEntrega" Type="varchar" MaxLength="100" />
+    <Property Name="NombreSolicitante" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK__Detalle_V__id_in__59FA5E80">
+    <End Role="Numero_Inventario" Type="Self.Numero_Inventario" Multiplicity="0..1" />
+    <End Role="Detalle_Vales_Resguardos" Type="Self.Detalle_Vales_Resguardos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Numero_Inventario">
+        <PropertyRef Name="id_numero_inventario" />
+      </Principal>
+      <Dependent Role="Detalle_Vales_Resguardos">
+        <PropertyRef Name="id_inventario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Detalle_V__id_pr__46E78A0C">
+    <End Role="Vale_De_Prestamo" Type="Self.Vale_De_Prestamo" Multiplicity="0..1" />
+    <End Role="Detalle_Vale_Prestamo" Type="Self.Detalle_Vale_Prestamo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vale_De_Prestamo">
+        <PropertyRef Name="id_prestamo" />
+      </Principal>
+      <Dependent Role="Detalle_Vale_Prestamo">
+        <PropertyRef Name="id_prestamo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Detalle_V__id_re__59063A47">
+    <End Role="Tabla_Resguardos" Type="Self.Tabla_Resguardos" Multiplicity="0..1" />
+    <End Role="Detalle_Vales_Resguardos" Type="Self.Detalle_Vales_Resguardos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tabla_Resguardos">
+        <PropertyRef Name="id_resguardo" />
+      </Principal>
+      <Dependent Role="Detalle_Vales_Resguardos">
+        <PropertyRef Name="id_resguardo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Numero_In__id_ar__5535A963">
+    <End Role="Tabla_Articulos" Type="Self.Tabla_Articulos" Multiplicity="0..1" />
+    <End Role="Numero_Inventario" Type="Self.Numero_Inventario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tabla_Articulos">
+        <PropertyRef Name="id_articulo" />
+      </Principal>
+      <Dependent Role="Numero_Inventario">
+        <PropertyRef Name="id_articulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Personas__id_ads__412EB0B6">
+    <End Role="Adscripcion" Type="Self.Adscripcion" Multiplicity="0..1" />
+    <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Adscripcion">
+        <PropertyRef Name="id_adscripcion" />
+      </Principal>
+      <Dependent Role="Personas">
+        <PropertyRef Name="id_adscripcion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Personas__id_tip__403A8C7D">
+    <End Role="Tabla_Tipos_Puesto" Type="Self.Tabla_Tipos_Puesto" Multiplicity="0..1" />
+    <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tabla_Tipos_Puesto">
+        <PropertyRef Name="id_tipo_puesto" />
+      </Principal>
+      <Dependent Role="Personas">
+        <PropertyRef Name="id_tipo_puesto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tabla_Art__id_fu__4E88ABD4">
+    <End Role="Fuentes_Financiamiento" Type="Self.Fuentes_Financiamiento" Multiplicity="0..1" />
+    <End Role="Tabla_Articulos" Type="Self.Tabla_Articulos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fuentes_Financiamiento">
+        <PropertyRef Name="id_fuente_financiamiento" />
+      </Principal>
+      <Dependent Role="Tabla_Articulos">
+        <PropertyRef Name="id_fuente_financiamiento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tabla_Res__id_pe__440B1D61">
+    <End Role="Personas" Type="Self.Personas" Multiplicity="0..1" />
+    <End Role="Tabla_Resguardos" Type="Self.Tabla_Resguardos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personas">
+        <PropertyRef Name="id_persona" />
+      </Principal>
+      <Dependent Role="Tabla_Resguardos">
+        <PropertyRef Name="id_persona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="InventarioModelStoreContainer">
+    <EntitySet Name="Adscripcion" EntityType="Self.Adscripcion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Detalle_Vale_Prestamo" EntityType="Self.Detalle_Vale_Prestamo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Detalle_Vales_Resguardos" EntityType="Self.Detalle_Vales_Resguardos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Fuentes_Financiamiento" EntityType="Self.Fuentes_Financiamiento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Numero_Inventario" EntityType="Self.Numero_Inventario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Personas" EntityType="Self.Personas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tabla_Articulos" EntityType="Self.Tabla_Articulos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tabla_Resguardos" EntityType="Self.Tabla_Resguardos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tabla_Tipos_Puesto" EntityType="Self.Tabla_Tipos_Puesto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vale_De_Prestamo" EntityType="Self.Vale_De_Prestamo" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Detalle_V__id_in__59FA5E80" Association="Self.FK__Detalle_V__id_in__59FA5E80">
+      <End Role="Numero_Inventario" EntitySet="Numero_Inventario" />
+      <End Role="Detalle_Vales_Resguardos" EntitySet="Detalle_Vales_Resguardos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Detalle_V__id_pr__46E78A0C" Association="Self.FK__Detalle_V__id_pr__46E78A0C">
+      <End Role="Vale_De_Prestamo" EntitySet="Vale_De_Prestamo" />
+      <End Role="Detalle_Vale_Prestamo" EntitySet="Detalle_Vale_Prestamo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Detalle_V__id_re__59063A47" Association="Self.FK__Detalle_V__id_re__59063A47">
+      <End Role="Tabla_Resguardos" EntitySet="Tabla_Resguardos" />
+      <End Role="Detalle_Vales_Resguardos" EntitySet="Detalle_Vales_Resguardos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Numero_In__id_ar__5535A963" Association="Self.FK__Numero_In__id_ar__5535A963">
+      <End Role="Tabla_Articulos" EntitySet="Tabla_Articulos" />
+      <End Role="Numero_Inventario" EntitySet="Numero_Inventario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Personas__id_ads__412EB0B6" Association="Self.FK__Personas__id_ads__412EB0B6">
+      <End Role="Adscripcion" EntitySet="Adscripcion" />
+      <End Role="Personas" EntitySet="Personas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Personas__id_tip__403A8C7D" Association="Self.FK__Personas__id_tip__403A8C7D">
+      <End Role="Tabla_Tipos_Puesto" EntitySet="Tabla_Tipos_Puesto" />
+      <End Role="Personas" EntitySet="Personas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tabla_Art__id_fu__4E88ABD4" Association="Self.FK__Tabla_Art__id_fu__4E88ABD4">
+      <End Role="Fuentes_Financiamiento" EntitySet="Fuentes_Financiamiento" />
+      <End Role="Tabla_Articulos" EntitySet="Tabla_Articulos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tabla_Res__id_pe__440B1D61" Association="Self.FK__Tabla_Res__id_pe__440B1D61">
+      <End Role="Personas" EntitySet="Personas" />
+      <End Role="Tabla_Resguardos" EntitySet="Tabla_Resguardos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,80 @@
+﻿@model pactica123.Models.Vale_De_Prestamo
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Vale_De_Prestamo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Emision)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Emision)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lugar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lugar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Devolucion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Devolucion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion_Articulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion_Articulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Objetivo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Objetivo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreEntrega)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreEntrega)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreSolicitante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreSolicitante)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

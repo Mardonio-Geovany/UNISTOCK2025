@@ -1,0 +1,45 @@
+﻿@model IEnumerable<pactica123.Models.Detalle_Vales_Resguardos>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cantidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Numero_Inventario.numero_inventario1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tabla_Resguardos.id_resguardo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cantidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Numero_Inventario.numero_inventario1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tabla_Resguardos.id_resguardo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_detalle_vale_resguardo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_detalle_vale_resguardo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_detalle_vale_resguardo })
+        </td>
+    </tr>
+}
+
+</table>
