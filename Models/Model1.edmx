@@ -4,12 +4,12 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="InventarioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="InventarioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Adscripcion">
           <Key>
             <PropertyRef Name="id_adscripcion" />
           </Key>
-          <Property Name="id_adscripcion" Type="int" Nullable="false" />
+          <Property Name="id_adscripcion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nombre_adscripcion" Type="varchar" MaxLength="100" />
           <Property Name="ubicacion" Type="varchar" MaxLength="100" />
         </EntityType>
@@ -17,7 +17,7 @@
           <Key>
             <PropertyRef Name="id_detalle_vale_prestamo" />
           </Key>
-          <Property Name="id_detalle_vale_prestamo" Type="int" Nullable="false" />
+          <Property Name="id_detalle_vale_prestamo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_prestamo" Type="int" />
           <Property Name="id_inventario" Type="int" />
           <Property Name="cantidad" Type="varchar" MaxLength="100" />
@@ -26,7 +26,7 @@
           <Key>
             <PropertyRef Name="id_detalle_vale_resguardo" />
           </Key>
-          <Property Name="id_detalle_vale_resguardo" Type="int" Nullable="false" />
+          <Property Name="id_detalle_vale_resguardo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_resguardo" Type="int" />
           <Property Name="id_inventario" Type="int" />
           <Property Name="cantidad" Type="varchar" MaxLength="100" />
@@ -35,14 +35,14 @@
           <Key>
             <PropertyRef Name="id_fuente_financiamiento" />
           </Key>
-          <Property Name="id_fuente_financiamiento" Type="int" Nullable="false" />
+          <Property Name="id_fuente_financiamiento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nombre_fuente" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="Numero_Inventario">
           <Key>
             <PropertyRef Name="id_numero_inventario" />
           </Key>
-          <Property Name="id_numero_inventario" Type="int" Nullable="false" />
+          <Property Name="id_numero_inventario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="numero_inventario" Type="varchar" MaxLength="50" />
           <Property Name="fecha_registro" Type="date" />
           <Property Name="id_articulo" Type="int" />
@@ -51,7 +51,7 @@
           <Key>
             <PropertyRef Name="id_persona" />
           </Key>
-          <Property Name="id_persona" Type="int" Nullable="false" />
+          <Property Name="id_persona" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nombre" Type="varchar" MaxLength="100" />
           <Property Name="apellido" Type="varchar" MaxLength="100" />
           <Property Name="correo" Type="varchar" MaxLength="100" />
@@ -63,7 +63,7 @@
           <Key>
             <PropertyRef Name="id_articulo" />
           </Key>
-          <Property Name="id_articulo" Type="int" Nullable="false" />
+          <Property Name="id_articulo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="descripcion" Type="varchar" MaxLength="150" />
           <Property Name="cantidad" Type="int" />
           <Property Name="marca" Type="varchar" MaxLength="50" />
@@ -77,7 +77,7 @@
           <Key>
             <PropertyRef Name="id_resguardo" />
           </Key>
-          <Property Name="id_resguardo" Type="int" Nullable="false" />
+          <Property Name="id_resguardo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_persona" Type="int" />
           <Property Name="fecha_entrega" Type="date" />
           <Property Name="id_Autoriza" Type="int" />
@@ -87,14 +87,14 @@
           <Key>
             <PropertyRef Name="id_tipo_puesto" />
           </Key>
-          <Property Name="id_tipo_puesto" Type="int" Nullable="false" />
+          <Property Name="id_tipo_puesto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="descripcion_puesto" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="Vale_De_Prestamo">
           <Key>
             <PropertyRef Name="id_prestamo" />
           </Key>
-          <Property Name="id_prestamo" Type="int" Nullable="false" />
+          <Property Name="id_prestamo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Fecha_Emision" Type="date" />
           <Property Name="Lugar" Type="varchar" MaxLength="100" />
           <Property Name="Fecha_Devolucion" Type="date" />
@@ -103,7 +103,7 @@
           <Property Name="NombreEntrega" Type="varchar" MaxLength="100" />
           <Property Name="NombreSolicitante" Type="varchar" MaxLength="100" />
         </EntityType>
-        <Association Name="FK__Detalle_V__id_in__59FA5E80">
+        <Association Name="FK__Detalle_V__id_in__74AE54BC">
           <End Role="Numero_Inventario" Type="Self.Numero_Inventario" Multiplicity="0..1" />
           <End Role="Detalle_Vales_Resguardos" Type="Self.Detalle_Vales_Resguardos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -115,7 +115,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Detalle_V__id_pr__46E78A0C">
+        <Association Name="FK__Detalle_V__id_pr__6B24EA82">
           <End Role="Vale_De_Prestamo" Type="Self.Vale_De_Prestamo" Multiplicity="0..1" />
           <End Role="Detalle_Vale_Prestamo" Type="Self.Detalle_Vale_Prestamo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -127,7 +127,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Detalle_V__id_re__59063A47">
+        <Association Name="FK__Detalle_V__id_re__73BA3083">
           <End Role="Tabla_Resguardos" Type="Self.Tabla_Resguardos" Multiplicity="0..1" />
           <End Role="Detalle_Vales_Resguardos" Type="Self.Detalle_Vales_Resguardos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -139,7 +139,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Numero_In__id_ar__5535A963">
+        <Association Name="FK__Numero_In__id_ar__70DDC3D8">
           <End Role="Tabla_Articulos" Type="Self.Tabla_Articulos" Multiplicity="0..1" />
           <End Role="Numero_Inventario" Type="Self.Numero_Inventario" Multiplicity="*" />
           <ReferentialConstraint>
@@ -151,7 +151,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Personas__id_ads__412EB0B6">
+        <Association Name="FK__Personas__id_ads__6383C8BA">
           <End Role="Adscripcion" Type="Self.Adscripcion" Multiplicity="0..1" />
           <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -163,7 +163,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Personas__id_tip__403A8C7D">
+        <Association Name="FK__Personas__id_tip__628FA481">
           <End Role="Tabla_Tipos_Puesto" Type="Self.Tabla_Tipos_Puesto" Multiplicity="0..1" />
           <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -175,7 +175,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Tabla_Art__id_fu__4E88ABD4">
+        <Association Name="FK__Tabla_Art__id_fu__6E01572D">
           <End Role="Fuentes_Financiamiento" Type="Self.Fuentes_Financiamiento" Multiplicity="0..1" />
           <End Role="Tabla_Articulos" Type="Self.Tabla_Articulos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -187,7 +187,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Tabla_Res__id_pe__440B1D61">
+        <Association Name="FK__Tabla_Res__id_pe__68487DD7">
           <End Role="Personas" Type="Self.Personas" Multiplicity="0..1" />
           <End Role="Tabla_Resguardos" Type="Self.Tabla_Resguardos" Multiplicity="*" />
           <ReferentialConstraint>
@@ -210,41 +210,40 @@
           <EntitySet Name="Tabla_Resguardos" EntityType="Self.Tabla_Resguardos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tabla_Tipos_Puesto" EntityType="Self.Tabla_Tipos_Puesto" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Vale_De_Prestamo" EntityType="Self.Vale_De_Prestamo" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Detalle_V__id_in__59FA5E80" Association="Self.FK__Detalle_V__id_in__59FA5E80">
+          <AssociationSet Name="FK__Detalle_V__id_in__74AE54BC" Association="Self.FK__Detalle_V__id_in__74AE54BC">
             <End Role="Numero_Inventario" EntitySet="Numero_Inventario" />
             <End Role="Detalle_Vales_Resguardos" EntitySet="Detalle_Vales_Resguardos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Detalle_V__id_pr__46E78A0C" Association="Self.FK__Detalle_V__id_pr__46E78A0C">
+          <AssociationSet Name="FK__Detalle_V__id_pr__6B24EA82" Association="Self.FK__Detalle_V__id_pr__6B24EA82">
             <End Role="Vale_De_Prestamo" EntitySet="Vale_De_Prestamo" />
             <End Role="Detalle_Vale_Prestamo" EntitySet="Detalle_Vale_Prestamo" />
           </AssociationSet>
-          <AssociationSet Name="FK__Detalle_V__id_re__59063A47" Association="Self.FK__Detalle_V__id_re__59063A47">
+          <AssociationSet Name="FK__Detalle_V__id_re__73BA3083" Association="Self.FK__Detalle_V__id_re__73BA3083">
             <End Role="Tabla_Resguardos" EntitySet="Tabla_Resguardos" />
             <End Role="Detalle_Vales_Resguardos" EntitySet="Detalle_Vales_Resguardos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Numero_In__id_ar__5535A963" Association="Self.FK__Numero_In__id_ar__5535A963">
+          <AssociationSet Name="FK__Numero_In__id_ar__70DDC3D8" Association="Self.FK__Numero_In__id_ar__70DDC3D8">
             <End Role="Tabla_Articulos" EntitySet="Tabla_Articulos" />
             <End Role="Numero_Inventario" EntitySet="Numero_Inventario" />
           </AssociationSet>
-          <AssociationSet Name="FK__Personas__id_ads__412EB0B6" Association="Self.FK__Personas__id_ads__412EB0B6">
+          <AssociationSet Name="FK__Personas__id_ads__6383C8BA" Association="Self.FK__Personas__id_ads__6383C8BA">
             <End Role="Adscripcion" EntitySet="Adscripcion" />
             <End Role="Personas" EntitySet="Personas" />
           </AssociationSet>
-          <AssociationSet Name="FK__Personas__id_tip__403A8C7D" Association="Self.FK__Personas__id_tip__403A8C7D">
+          <AssociationSet Name="FK__Personas__id_tip__628FA481" Association="Self.FK__Personas__id_tip__628FA481">
             <End Role="Tabla_Tipos_Puesto" EntitySet="Tabla_Tipos_Puesto" />
             <End Role="Personas" EntitySet="Personas" />
           </AssociationSet>
-          <AssociationSet Name="FK__Tabla_Art__id_fu__4E88ABD4" Association="Self.FK__Tabla_Art__id_fu__4E88ABD4">
+          <AssociationSet Name="FK__Tabla_Art__id_fu__6E01572D" Association="Self.FK__Tabla_Art__id_fu__6E01572D">
             <End Role="Fuentes_Financiamiento" EntitySet="Fuentes_Financiamiento" />
             <End Role="Tabla_Articulos" EntitySet="Tabla_Articulos" />
           </AssociationSet>
-          <AssociationSet Name="FK__Tabla_Res__id_pe__440B1D61" Association="Self.FK__Tabla_Res__id_pe__440B1D61">
+          <AssociationSet Name="FK__Tabla_Res__id_pe__68487DD7" Association="Self.FK__Tabla_Res__id_pe__68487DD7">
             <End Role="Personas" EntitySet="Personas" />
             <End Role="Tabla_Resguardos" EntitySet="Tabla_Resguardos" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="InventarioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
