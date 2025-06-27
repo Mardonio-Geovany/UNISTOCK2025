@@ -362,7 +362,7 @@
           <NavigationProperty Name="Detalle_Vale_Prestamo" Relationship="Self.FK__Detalle_V__id_pr__46E78A0C" FromRole="Vale_De_Prestamo" ToRole="Detalle_Vale_Prestamo" />
         </EntityType>
         <Association Name="FK__Personas__id_ads__412EB0B6">
-          <End Role="Adscripcion" Type="Self.Adscripcion" Multiplicity="0..1" />
+          <End Role="Adscripcion" Type="InventarioModel.Adscripcion" Multiplicity="0..1" />
           <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Adscripcion">
@@ -458,7 +458,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="InventarioEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Adscripcion" EntityType="Self.Adscripcion" />
+          <EntitySet Name="Adscripcion" EntityType="InventarioModel.Adscripcion" />
           <EntitySet Name="Detalle_Vale_Prestamo" EntityType="Self.Detalle_Vale_Prestamo" />
           <EntitySet Name="Detalle_Vales_Resguardos" EntityType="Self.Detalle_Vales_Resguardos" />
           <EntitySet Name="Fuentes_Financiamiento" EntityType="Self.Fuentes_Financiamiento" />

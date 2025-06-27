@@ -1,33 +1,35 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Inicio - UNISTOCK";
 }
 
 <main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
+    <section class="row" aria-labelledby="unistockTitle">
+        <h1 id="title">Bienvenido a UNISTOCK</h1>
+        <p class="lead">Sistema de control de inventario de la Universidad Tecnológica de Tula-Tepeji, campus Chapulhuacán.</p>
+        <p>Este sistema está diseñado exclusivamente para el encargado del inventario. Aquí podrá registrar, consultar, editar y dar seguimiento al uso de materiales, equipos y mobiliario en las distintas áreas.</p>
     </section>
 
     <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
+        <section class="col-md-4" aria-labelledby="registroTitle">
+            <h2 id="registroTitle">Gestión de Inventario</h2>
             <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
+                Accede a las herramientas para agregar nuevos artículos, modificar información existente o consultar el historial de movimientos de inventario.
             </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+            <p><a class="btn btn-outline-primary" href="@Url.Action("Index", "Numero_Inventario")">Ir al Inventario &raquo;</a></p>
         </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+
+        <section class="col-md-4" aria-labelledby="valesTitle">
+            <h2 id="valesTitle">Vales y Resguardos</h2>
+            <p>
+                Administra los vales de préstamo y resguardo de materiales y equipos. Asegúrate de llevar un control preciso y actualizado.
+            </p>
+            <p><a class="btn btn-outline-primary" href="@Url.Action("Index", "Tabla_Resguardos")">Ver Resguardos &raquo;</a></p>
         </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+
+        <section class="col-md-4" aria-labelledby="personasTitle">
+            <h2 id="personasTitle">Usuarios Registrados</h2>
+            <p>Consulta y administra la lista de personas responsables del equipo. Cada movimiento queda asociado a un usuario del sistema.</p>
+            <p><a class="btn btn-outline-primary" href="@Url.Action("Index", "Personas")">Ver Usuarios &raquo;</a></p>
         </section>
     </div>
 </main>

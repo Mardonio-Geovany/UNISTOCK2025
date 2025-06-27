@@ -3,21 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\mardo\\source\\repos\\pactica123\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{72E0DDEA-27AA-49CC-BFBA-DE982F66DD4C}|pactica123.csproj|c:\\users\\mardo\\source\\repos\\pactica123\\models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
-      "RelativeMoniker": "D:0:0:{72E0DDEA-27AA-49CC-BFBA-DE982F66DD4C}|pactica123.csproj|solutionrelative:models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mardo\\Downloads\\nuevoscriptbasedeunistock.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+      "AbsoluteMoniker": "D:0:0:{72E0DDEA-27AA-49CC-BFBA-DE982F66DD4C}|pactica123.csproj|c:\\users\\mardo\\source\\repos\\pactica123\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{72E0DDEA-27AA-49CC-BFBA-DE982F66DD4C}|pactica123.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{72E0DDEA-27AA-49CC-BFBA-DE982F66DD4C}|pactica123.csproj|C:\\Users\\mardo\\source\\repos\\pactica123\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{72E0DDEA-27AA-49CC-BFBA-DE982F66DD4C}|pactica123.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mardo\\Downloads\\nuevoscriptbasedeunistock.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+      "AbsoluteMoniker": "D:0:0:{72E0DDEA-27AA-49CC-BFBA-DE982F66DD4C}|pactica123.csproj|c:\\users\\mardo\\source\\repos\\pactica123\\models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{72E0DDEA-27AA-49CC-BFBA-DE982F66DD4C}|pactica123.csproj|solutionrelative:models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mardo\\Downloads\\nuevoscriptbasedeunistock.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
+      "AbsoluteMoniker": "D:0:0:{72E0DDEA-27AA-49CC-BFBA-DE982F66DD4C}|pactica123.csproj|c:\\users\\mardo\\source\\repos\\pactica123\\controllers\\adscripcionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72E0DDEA-27AA-49CC-BFBA-DE982F66DD4C}|pactica123.csproj|solutionrelative:controllers\\adscripcionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72E0DDEA-27AA-49CC-BFBA-DE982F66DD4C}|pactica123.csproj|c:\\users\\mardo\\source\\repos\\pactica123\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{72E0DDEA-27AA-49CC-BFBA-DE982F66DD4C}|pactica123.csproj|solutionrelative:views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,6 +35,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\mardo\\source\\repos\\pactica123\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\mardo\\source\\repos\\pactica123\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T15:15:01.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdscripcionsController.cs",
+              "DocumentMoniker": "C:\\Users\\mardo\\source\\repos\\pactica123\\Controllers\\AdscripcionsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdscripcionsController.cs",
+              "ToolTip": "C:\\Users\\mardo\\source\\repos\\pactica123\\Controllers\\AdscripcionsController.cs",
+              "RelativeToolTip": "Controllers\\AdscripcionsController.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAmwH8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T14:57:05.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "C:\\Users\\mardo\\source\\repos\\pactica123\\Views\\Home\\About.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\About.cshtml",
+              "ToolTip": "C:\\Users\\mardo\\source\\repos\\pactica123\\Views\\Home\\About.cshtml",
+              "RelativeToolTip": "Views\\Home\\About.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T14:56:31.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Model1.edmx [Diagram1]",
               "DocumentMoniker": "C:\\Users\\mardo\\source\\repos\\pactica123\\Models\\Model1.edmx",
               "RelativeDocumentMoniker": "Models\\Model1.edmx",
@@ -44,23 +86,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "nuevoscriptbasedeunistock.sql ",
-              "DocumentMoniker": "C:\\Users\\mardo\\Downloads\\nuevoscriptbasedeunistock.sql",
-              "RelativeDocumentMoniker": "..\\..\\..\\Downloads\\nuevoscriptbasedeunistock.sql",
-              "ToolTip": "nuevoscriptbasedeunistock.sql ",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-06-26T15:10:14.417Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\mardo\\source\\repos\\pactica123\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\mardo\\source\\repos\\pactica123\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-24T19:19:06.551Z",
               "EditorCaption": ""
